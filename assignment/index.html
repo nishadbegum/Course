@@ -2,10 +2,112 @@
 <html>
 <head>
 	<title>
-		hello
+		Cities
 	</title>
+	<style>
+	*{
+		box-sizing: border-box;
+	}
+	h1{
+		margin-bottom: :15px;
+	}
+	p{
+		border:5px solid black;
+		background-color: pink;
+		width:90%
+		height:150px;
+		margin-right:auto;
+		margin-left: auto;
+		font-family: arial;
+		color:purple;
+		font-size: 15px;
+
+	}
+	#row{
+		width:100%;
+		
+	}
+	
+	/* desktop version*/
+	@media(min-width:1200px)
+	{
+		#p1,#p2,#p3{
+			float:left;
+			border:1px solid green;
+			background-color: pink;
+		}
+		#p1{
+			width:33%;
+			
+
+		}
+		#p2
+		{
+          width:33%;
+          
+		}
+		#p3{
+          width:33%;
+          
+		}
+	}
+	/*tablet version*/
+	@media(min-width:786px) and (max-width: 991px)
+	{
+		#p1,#p2,#p3{
+			float:left;
+			border:1px solid green;
+		}
+		#p1{
+         width:50%;
+		}
+		#p2
+		{
+         width:50%;
+		}
+		#p3{
+        width:100%;
+		}
+	}
+	/*Mobile version*/
+	@media(max-width: 991px)
+	{
+		#p1,#p2,#p3{
+			float:left;
+			border:1px solid green;
+		}
+		#p1{
+        width:100%;
+		}
+		#p2
+		{
+         width:100%;
+		}
+		#p3{
+        width:100%;
+		}
+	}
+	</style>
 </head>
 <body>
-<p> how are you </p>
+
+<div id="row">
+<div id="p1">
+<h1> San Francisco</h1><p>
+San Francisco, in northern California, is a city on the tip of a peninsula surrounded by the Pacific Ocean and San Francisco Bay. It's known for its hilly landscape, year-round fog, iconic Golden Gate Bridge, cable cars and colorful Victorian houses. The Financial District's Transamerica Pyramid is its most distinctive skyscraper. In the bay sits Alcatraz Island, site of the notorious former prison.
+</p>
+</div>
+
+
+<div id="p2"> <h1>New York </h1><p>
+Home to the Empire State Building, Times Square, Statue of Liberty and other iconic sites, New York City is a fast-paced, globally influential center of art, culture, fashion and finance. The city’s 5 boroughs sit where the Hudson River meets the Atlantic Ocean, with the island borough of Manhattan at the “Big Apple's" core.
+</p>
+</div>
+<div id="p3"><h1> Washington</h1>
+<p>
+Washington, DC, the U.S. capital, is a compact city on the Potomac River, bordering the states of Maryland and Virginia. It’s defined by imposing neoclassical monuments and buildings – including the iconic ones that house the federal government’s 3 branches: the Capitol, White House and Supreme Court – but also its museums and performing-arts venues such as the Kennedy Center.
+ </p>
+ </div>
+</div>
 </body>
 </html>
