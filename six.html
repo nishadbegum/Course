@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>My Fantastic Guestbook</title>
+</head>
+<body>
+<table  border="1" >
+
+<tr>
+<td>Principal : <input type="text" id="one" /><br><br></td> </tr>
+<tr> <td>Interset :<input type="text" id="two" /><br><br></td><br/> </tr>
+<tr> <td> Monthly payment :<input type="text" id="three" /> <br><br></td><br /><tr> </table>
+<input type="button" value="submit" onclick="calculate()"/>
+<input type="button" value="clear" onclick="clearit()">
+<input type="textarea" id="output" style="float:right;width:250px;background-color:pink"/>
+<script>
+
+
+
+function calculate()
+{
+var prin = document.getElementById("one").value;
+var inte= document.getElementById("two").value;
+var pay= document.getElementById("three").value;
+var interest = inte/0.083;
+var totalinterest = 0;
+if(prin < 50000 && inte > 12)
+{
+document.write("the minimum mogratge amount is 50000$ and the month between 1-12");
+exit;
+}
+
+totalinterest = prin*interest/100;
+var result=document.write(totalinterest);
+document.getElementById("output").innerHTML=result;
+}
+
+function clearit()
+{
+document.getElementById("one").value="";
+document.getElementById("two").value="";
+document.getElementById("three").value="";
+}
+</script>
+
+
+
+
+</body>
+</html>
