@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> GPA </title>
+<center> GPA Calculator - hw4854 </center> 
+<em>Enter the CourseNo, Grade and Hour in the Textarea in the form (" CS6320 A 4") </em> 
+
+<script type="text/javascript" >
+function calculate()
+{
+var textarea = document.getElementById("first");
+var b=textarea.value;
+
+b=b.trim();
+b=b.replace(/\n/g," ");
+var spli= b.split(" ");
+var l=spli.length;
+
+var j=0;
+var gpa=0;
+var course= new Array(10);
+var grade= new Array(10);
+var hour = new Array(10);
+var total4 =0;
+var point=new Array(10);
+var backup=0;
+while (j<l)
+{
+for(var i=0;i<10;i++)
+{
+if(j<l)
+{
+course[i]=spli[j];
+
+j++;
+grade[i]= spli[j];
+
+j++;
+hour[i]= spli[j];
+
+j++;
+backup++;
+
+}
+else 
+break;
+
+}
+
+}
+
+for(var i=0;i<backup;i++)
+{
+if(grade[i] == "A")
+{
+point[i] = 4;
+
+}
+else if(grade[i] == "B+")
+{
+point[i] = 3.5;
+
+}
+else if(grade[i] == "B")
+{
+point[i] = 3;
+
+}
+else if(grade[i] == "C+")
+{
+point[i] = 2.5;
+
+}
+else if(grade[i] == "C")
+{
+point[i]= 2;
+
+}
+else if(grade[i] == "D")
+{
+point[i] = 1;
+
+}
+else if(grade[i] == "F" || "WF" || "AF")
+{
+point[i] = 0;
+
+}
+}
+var totalpoint=0;
+var totalhour=0;
+
+
+for (var i=0;i<backup;i++)
+{
+totalpoint = point[i] * hour[i]+totalpoint;
+
+totalhour= totalhour+ 1 * hour[i];
+
+}
+var gpa=totalpoint/totalhour;
+document.getElementById("three").value=gpa;
+document.getElementById("four").value=totalpoint;
+document.getElementById("five").value=totalhour;
+}
+</script>
+</head>
+
+<body bgcolor="pink">
+<center>
+
+<form id="new">
+<textarea id="first" rows=20 cols=20> </textarea>
+<br>
+<input id="one" type="button" onclick="calculate()" value="calculate"> </input>
+</form>
+
+<form id="new1">
+<label> GPA          <input id="three" type="text"> </input> </label>
+<br>
+<label> Total Points <input  id="four" type="text"> </input> </label>
+<br>
+<label> Total Hours <input id="five" type="text"> </input> </label>
+</form>
+</center>
+</body>
+</html>
